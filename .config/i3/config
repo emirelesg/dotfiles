@@ -66,7 +66,7 @@ bindsym $mod+comma              exec --no-startup-id dbus-send --print-reply --d
 bindsym $mod+period             exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 bindsym $mod+Return             exec urxvt
-bindsym $mod+Shift+space        floating toggle
+bindsym $mod+Shift+f        			floating toggle
 bindsym $mod+space              focus mode_toggle
 
 # ---Letter Keys--- #
@@ -107,7 +107,7 @@ bindsym $mod+v                  split v
 bindsym $mod+s			        gaps inner current plus 5
 bindsym $mod+Shift+s            gaps inner current minus 5
 
-bindsym $mod+Shift+Return            exec --no-startup-id thunar
+bindsym $mod+e           exec --no-startup-id thunar
 
 bindsym $mod+Shift+r            restart
 

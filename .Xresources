@@ -1,4 +1,4 @@
-URxvt.font: xft:monospace:size=10
+URxvt.font: xft:DejaVu Sans Mono:size=9
 URxvt.scrollBar: false
 URxvt.transparency: true
 URxvt.shading: 25
