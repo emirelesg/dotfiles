@@ -5,11 +5,15 @@ apt upgrade
 
 apt remove --auto-remove \
 	pidgin thunderbird xfburn mugshot simple-scan gnome-mines gnome-sudoku \
-	sgt-launcher sgt-puzzles parole \
-	humanity-icon-theme xfce4-dict
+	sgt-launcher sgt-puzzles parole
 
 apt install \
-	git arandr xbacklight curl vlc kazam
+	git arandr xbacklight curl vlc kazam net-tools gcc g++ make
+
+# https://github.com/nodesource/distributions/blob/master/README.md
+curl -sL https://deb.nodesource.com/setup_14.x | bash -
+apt-get install nodejs
+npm install -g @vue/cli
 
 snap install chromium
 snap install spotify
