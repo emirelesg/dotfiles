@@ -1,0 +1,7 @@
+{
+    "material-icon-theme.showWelcomeMessage": false,
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "update.mode": "manual",
+    "window.titleBarStyle": "custom"
+}

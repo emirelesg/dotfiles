@@ -51,10 +51,10 @@ for_window [class="Tk"] floating enable
 # ----------------------------------------------------------
 
 # ---Media Keys--- #
-bindsym $mod+XF86AudioRaiseVolume   exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym $mod+XF86AudioLowerVolume   exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioRaiseVolume 	    exec --no-startup-id amixer -q set Master 5%+
-bindsym XF86AudioLowerVolume	    exec --no-startup-id amixer -q set Master 5%-
+bindsym XF86AudioRaiseVolume   exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume   exec --no-startup-id pactl set-sink-volume 0 -5%
+# bindsym XF86AudioRaiseVolume 	    exec --no-startup-id amixer -q set Master 5%+
+# bindsym XF86AudioLowerVolume	    exec --no-startup-id amixer -q set Master 5%-
 bindsym XF86AudioMute               exec --no-startup-id amixer -D pulse set Master toggle
 bindsym XF86AudioMicMute            exec --no-startup-id amixer set Capture toggle
 bindsym XF86MonBrightnessUp 	    exec --no-startup-id xbacklight -inc 10
@@ -67,7 +67,7 @@ bindsym $mod+comma              exec --no-startup-id dbus-send --print-reply --d
 bindsym $mod+period             exec --no-startup-id dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 
 bindsym $mod+Return             exec urxvt
-bindsym $mod+Shift+f        			floating toggle
+bindsym $mod+Shift+f       		floating toggle
 bindsym $mod+space              focus mode_toggle
 
 # ---Letter Keys--- #
@@ -76,15 +76,14 @@ bindsym $mod+space              focus mode_toggle
 # bindsym $mod+a                focus parent
 # bindsym $mod+e                layout toggle split
 # bindsym $mod+w                layout tabbed
-# bindsym $mod+z		gaps outer current plus 5
+# bindsym $mod+z				gaps outer current plus 5
 # bindsym $mod+Shift+z          gaps outer current minus 5
 
 # ---Programs--- #
 
-bindsym $mod+d                  exec --no-startup-id dmenu_run
-bindsym $mod+Shift+d			exec --no-startup-id rofi -show run
+bindsym $mod+d			exec --no-startup-id rofi -show run
 bindsym $mod+Shift+e            exec "i3-msg exit"
-bindsym $mod+Shift+c		    exec --no-startup-id chromium-browser
+bindsym $mod+Shift+c		    exec --no-startup-id chromium
 bindsym $mod+Shift+v		    exec --no-startup-id code
 
 bindsym $mod+f                  fullscreen toggle
@@ -109,7 +108,7 @@ bindsym $mod+v                  split v
 bindsym $mod+s			        gaps inner current plus 5
 bindsym $mod+Shift+s            gaps inner current minus 5
 
-bindsym $mod+e           exec --no-startup-id thunar
+bindsym $mod+Tab           		exec --no-startup-id thunar
 
 bindsym $mod+Shift+r            restart
 

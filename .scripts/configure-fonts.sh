@@ -1,5 +1,6 @@
 #!/usr/bin/sh
 
+cd $HOME/.fonts
 mkfontdir
 mkfontscale
 xset +fp $HOME/.fonts

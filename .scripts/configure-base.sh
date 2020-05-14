@@ -3,6 +3,7 @@
 apt update
 apt upgrade
 
+# Specific to Xubuntu 20.04
 apt remove --auto-remove \
 	pidgin thunderbird xfburn mugshot simple-scan gnome-mines gnome-sudoku \
 	sgt-launcher sgt-puzzles parole
