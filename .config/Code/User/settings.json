@@ -3,5 +3,6 @@
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
     "update.mode": "manual",
-    "window.titleBarStyle": "custom"
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": -1
 }

@@ -10,7 +10,7 @@ apt remove --auto-remove \
 
 apt install \
 	git arandr xbacklight curl vlc kazam net-tools gcc g++ make \
-	font-manager ffmpeg
+	font-manager ffmpeg jq
 
 # https://github.com/nodesource/distributions/blob/master/README.md
 curl -sL https://deb.nodesource.com/setup_14.x | bash -
