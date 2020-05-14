@@ -39,6 +39,7 @@ exec --no-startup-id spotify
 exec_always --no-startup-id xsetroot -solid "#333333"
 for_window [class="Spotify"]    move to workspace $ws10
 exec_always --no-startup-id $HOME/.scripts/launch-polybar.sh &
+exec --no-startup-id $HOME/.scripts/load-fonts.sh &
 
 # ----------------------------------------------------------
 # Floating Apps
