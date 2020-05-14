@@ -8,7 +8,7 @@ apt remove --auto-remove \
 	sgt-launcher sgt-puzzles parole
 
 apt install \
-	git arandr xbacklight curl vlc kazam net-tools gcc g++ make
+	git arandr xbacklight curl vlc kazam net-tools gcc g++ make font-manager
 
 # https://github.com/nodesource/distributions/blob/master/README.md
 curl -sL https://deb.nodesource.com/setup_14.x | bash -
