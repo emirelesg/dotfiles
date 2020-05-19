@@ -9,7 +9,7 @@ apt remove --auto-remove \
 	sgt-launcher sgt-puzzles parole
 
 apt install \
-	git arandr xbacklight curl vlc kazam net-tools gcc g++ make \
+	git arandr xbacklight curl kazam net-tools gcc g++ make \
 	font-manager ffmpeg jq feh
 
 # https://github.com/nodesource/distributions/blob/master/README.md
@@ -25,6 +25,7 @@ fi
 
 snap install chromium
 snap install spotify
+snap install vlc
 snap install code --classic
 
 echo "xbacklight config for Thinkpad E470"
