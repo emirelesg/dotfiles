@@ -3,6 +3,7 @@
 # for examples
 
 alias dgit='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias covid='gcloud beta compute ssh --zone "us-central1-a" "worker-1" --project "covid19-mx-stats"'
 
 # If not running interactively, don't do anything
 case $- in
