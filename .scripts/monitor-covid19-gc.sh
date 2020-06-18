@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+ip="34.72.17.34"
+
 good_heartbeat="a few seconds ago"
 red="%{F#EC7875}"
 pink="%{F#EC407A}"
@@ -17,12 +19,12 @@ grey="%{F#8C8C8C}"
 indigo="%{F#6C77BB}"
 
 # Check if rpi is up and connected to the internet.
-ping -c 1 35.208.253.23 > /dev/null 2>&1
+ping -c 1 $ip > /dev/null 2>&1
 rc=$?
 if [[ $rc -eq 0 ]]; then
 
 	# Get data from status service.
-	data=$(curl -s 35.208.253.23)
+	data=$(curl -s $ip)
 	curlrc=$?
 
 	if [[ $curlrc -eq 0 ]]; then
@@ -33,15 +35,14 @@ if [[ $rc -eq 0 ]]; then
 		retries=$(echo "$data" | jq -r '.retries')
 		last_update=$(echo "$data" | jq -r '.lastUpdate')
 		remaining=$(echo "$data" | jq -r '.remaining')
-		
-		if [[ "$heartbeat" == "$good_heartbeat" ]]; then			
+		if [[ $is_updating -eq 1 ]]; then
+			echo "${amber}Updating... ${retries} retries%{F-}"
+		elif [[ "$heartbeat" == "$good_heartbeat" ]]; then			
 			if [[ "$last_update" != "" ]]; then	
 				echo -e "${cyan}${last_update}%{F-} | \c"
 			fi
 			if [[ $is_waiting -eq 1 ]]; then
-				echo "Update ${remaining}"
-			elif [[ $is_updating -eq 1 ]]; then
-				echo "${amber}Updating... ${retries} retries%{F-}"
+				echo "Next update ${remaining}"
 			fi
 		else
 			echo "${red}Worker service down%{F-}"
