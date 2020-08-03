@@ -22,13 +22,13 @@ set $ws10   "10"
 # ----------------------------------------------------------
 # Font
 # ----------------------------------------------------------
-font pango:DejaVu Sans Mono 9
+font pango:DejaVu Sans Mono, FontAwesome 9
 
 # ----------------------------------------------------------
 # Gaps
 # ----------------------------------------------------------
 for_window [class="^.*"] border pixel 1
-gaps inner 10
+gaps inner 0
 gaps outer 0
 # smart_gaps on
 
@@ -36,14 +36,16 @@ gaps outer 0
 # Autostart Apps
 # ----------------------------------------------------------
 exec --no-startup-id $HOME/.scripts/init-session.sh &
-exec_always --no-startup-id $HOME/.scripts/launch-polybar.sh &
+# exec_always --no-startup-id $HOME/.scripts/launch-polybar.sh &
 exec --no-startup-id spotify
+exec_always --no-startup-id megasync
 for_window [class="Spotify"]    move to workspace $ws10
 
 # ----------------------------------------------------------
 # Floating Apps
 # ----------------------------------------------------------
 for_window [class="Tk"] floating enable
+for_window [class="megasync"] floating enable
 
 # ----------------------------------------------------------
 # KeyBindings
@@ -163,3 +165,22 @@ mode "resize" {
         bindsym Escape          mode "default"
 }
 bindsym $mod+r mode "resize"
+
+set $bg #222222
+set $fg #00BFA5
+set $separator #555555
+
+client.focused $bg $bg $bg $bg $fg
+
+bar {
+        status_command py3status -c $HOME/.config/i3status/config
+        position top
+        separator_symbol " ~ "
+        colors {
+                background           $bg
+                statusline           $accent
+                separator            $separator
+                focused_workspace    $fg $fg $bg
+                inactive_workspace   $bg $bg $separator
+        }
+}
