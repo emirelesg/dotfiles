@@ -1,3 +1,6 @@
 [user]
-	email = enrique.mireles@udem.edu
+	email = enriquemg96@gmail.com
 	name = Enrique Mireles
+
+[includeIf "gitdir:~/work/"]
+    path = ~/work/.gitconfig
