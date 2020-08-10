@@ -4,6 +4,7 @@
 
 alias dgit='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias covid='gcloud beta compute ssh --zone "us-central1-a" "worker-1" --project "covid19-mx-stats"'
+alias hdmi='xrandr --output eDP1 --primary --mode 1920x1080 --pos 1600x0 --rotate normal --output DP1 --off --output HDMI1 --mode 1600x900_60.00 --pos 0x0 --rotate normal --output HDMI2 --off --output VIRTUAL1 --off'
 
 # If not running interactively, don't do anything
 case $- in
@@ -126,6 +127,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$(yarn global bin):$PATH"
 
 alias ssh-work="ssh-add -D; ssh-add ~/.ssh/id_rsa_labforward"
+alias ssh-dev="ssh-add -D; ssh-add ~/.ssh/id_rsa_labforward_dev"
 
 find-up () {
     path=$(pwd)
