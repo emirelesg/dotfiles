@@ -10,23 +10,24 @@ apt remove --auto-remove \
 
 apt install \
 	git arandr xbacklight curl kazam net-tools gcc g++ make \
-	font-manager ffmpeg jq feh
+	font-manager ffmpeg jq feh fonts-noto-color-emoji
 
 # https://github.com/nodesource/distributions/blob/master/README.md
-curl -sL https://deb.nodesource.com/setup_14.x | bash -
-apt-get install nodejs
+#curl -sL https://deb.nodesource.com/setup_14.x | bash -
+# apt-get install nodejs
 
 # Install vue-cli if not already installed.
-if command -v vue>/dev/null; then
-	echo "Vue CLI already installed."
-else 
-	npm install -g @vue/cli
-fi
+#if command -v vue>/dev/null; then
+#	echo "Vue CLI already installed."
+#else 
+#	npm install -g @vue/cli
+#fi
 
 snap install chromium
 snap install spotify
 snap install vlc
 snap install code --classic
+snap install typora --classic
 
 echo "xbacklight config for Thinkpad E470"
 /bin/cat <<EOM > /usr/share/X11/xorg.conf.d/20-intel.conf
