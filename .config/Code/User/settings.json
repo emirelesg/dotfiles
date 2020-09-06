@@ -1,8 +1,20 @@
 {
-    "material-icon-theme.showWelcomeMessage": false,
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "update.mode": "manual",
-    "window.titleBarStyle": "custom",
-    "window.zoomLevel": -1
+  "material-icon-theme.showWelcomeMessage": false,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "update.mode": "manual",
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 0,
+  "git.suggestSmartCommit": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "editor.renderWhitespace": "none",
+  "cSpell.enabled": false,
+  "workbench.colorTheme": "1984 - Cyberpunk",
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.shell.linux": "/bin/bash",
+  "files.autoSave": "onFocusChange",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
