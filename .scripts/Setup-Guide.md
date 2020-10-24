@@ -32,3 +32,5 @@ git clone --bare https://github.com/emirelesg/dotfiles.git .dotfiles
 dgit config --local status.showUntrackedFiles no
 ```
 
+Execute `./scripts/configure-vscode.sh`
+
