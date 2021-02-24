@@ -4,17 +4,34 @@
   "telemetry.enableCrashReporter": false,
   "update.mode": "manual",
   "window.titleBarStyle": "custom",
-  "window.zoomLevel": 0,
   "git.suggestSmartCommit": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "latex-workshop.view.pdf.viewer": "tab",
   "editor.renderWhitespace": "none",
   "cSpell.enabled": false,
-  "workbench.colorTheme": "1984 - Cyberpunk",
-  "vsicons.dontShowNewVersionMessage": true,
   "terminal.integrated.shell.linux": "/bin/bash",
   "files.autoSave": "onFocusChange",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.colorTheme": "Halcyon",
+  "workbench.iconTheme": "material-icon-theme",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions.ignoreRecommendations": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.startupEditor": "newUntitledFile"
 }

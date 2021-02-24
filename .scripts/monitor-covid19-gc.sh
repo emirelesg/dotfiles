@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 ip="34.72.17.34"
 

@@ -1,0 +1,47 @@
+order += 'spotify'
+order += 'github'
+order += 'mail'
+order += 'sysdata'
+order += 'volume_status'
+order += 'clock'
+order += 'keyboard_layout'
+
+github {
+    repo = ''
+    username = 'emireles'
+    auth_token = '327c35dfa277765d636c22fc564de4925f408d5b'
+    format = 'Github {notifications_count}'
+    allow_urgent = true
+}
+
+mail {
+    accounts = {
+        'imap': [
+            {
+                'name': 'work',
+                'user': 'enrique.mireles@labforward.io',
+                'password': 'jdfjocnygildxzvt',
+                'server': 'imap.gmail.com',
+                'port': 993
+            }
+        ]
+    }
+}
+
+sysdata {
+    format = '[\?color=cpu_used_percent CPU: {cpu_used_percent}%], [\?color=mem_used_percent Mem: {mem_used}/{mem_total} {mem_total_unit}]'
+}
+
+volume_status {
+    cache_timeout = 1
+    command = pactl
+}
+
+clock {
+    format = '{Europe/Berlin}'
+    format_time = '%Y-%m-%d %H:%M:%S'
+}
+
+keyboard_layout {
+    layouts = ['de', 'latam']
+}
